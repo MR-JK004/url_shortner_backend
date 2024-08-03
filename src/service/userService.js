@@ -39,7 +39,7 @@ const createUser = async (req, res) => {
         user.activationTokenExpiration = Date.now() + 3600000; // 1 hour
         await user.save();
 
-        const activationLink = `http://localhost:5173/user/activation-link/${randomString}`;
+        const activationLink = `https://task-url-shortener-frontend.netlify.app/user/activation-link/${randomString}`;
         await transporter.sendMail({
             to: email,
             from: process.env.EMAIL,
