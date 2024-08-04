@@ -62,7 +62,7 @@ const createShortUrl = async (req, res) => {
     shortCode = shortid.generate();
   }
 
-  const shortUrl = `https://task-url-shortener-frontend.netlify.app/url/${shortCode}`;
+  const shortUrl = `https://urlshortner-backend-08lq.onrender.com/url/${shortCode}`;
   const date = Date.now();
 
   try {

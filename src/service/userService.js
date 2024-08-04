@@ -168,7 +168,7 @@ const forgetPassword = async (req, res) => {
       user.resetTokenExpiration = Date.now() + 3600000; // 1 hour
       await user.save();
   
-      const resetLink = `http://localhost:5173/reset-password/${randomString}`;
+      const resetLink = `https://task-url-shortener-frontend.netlify.app/reset-password/${randomString}`;
   
       await transporter.sendMail({
         to: email,
