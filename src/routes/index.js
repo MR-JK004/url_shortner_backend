@@ -15,6 +15,6 @@ routes.get('/url/daily-count',authMiddleware,urlService.getDailyUrlCount)
 routes.get('/url/monthly-count',authMiddleware,urlService.getMonthlyUrlCount)
 routes.get('/url/url-list',authMiddleware,urlService.getUrlList)
 routes.post('/url/shorten',authMiddleware,urlService.createShortUrl)
-routes.get('/url/:shortCode',urlService.shortCode)
+routes.get('/:shortCode',urlService.shortCode)
 
 export default routes
