@@ -225,7 +225,7 @@ const resetPassword = async (req, res) => {
             message: "Password reset successfully"
         });
     } catch (error) {
-        console.error('Error in resetPassword:', error); // Log the error for debugging
+        console.error('Error in resetPassword:', error);
         res.status(500).send({
             message: "Internal Server Error",
             error: error.message
